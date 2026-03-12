@@ -1,0 +1,27 @@
+* Encipher
+File to experiment with creating encipher algorithms.
+
+** Rail
+#+begin_src js
+  function encipherRail(text) {
+    var arr = []
+    iterateEveryOtherChar(text, arr, 0)
+    iterateEveryOtherChar(text, arr, 1)
+
+    return arr;
+  }
+
+  function iterateEveryOtherChar(text, arr, startIndex) {
+    for (let i = startIndex; i < text.length; i = i + 2) {
+      if (i >= text.length) {
+        break
+      }
+      arr.push(text[i])
+    }
+  }
+
+  return encipherRail("MEETMETHURSDAYNIGHTX")
+#+end_src
+
+#+RESULTS:
+| M | E | M | T | U | S | A | N | G | T | E | T | E | H | R | D | Y | I | H | X |
