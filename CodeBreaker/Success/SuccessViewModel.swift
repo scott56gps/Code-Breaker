@@ -1,3 +1,5 @@
+import SwiftUI
+
 class SuccessViewModel {
     private let router: RouteModifiable
 
@@ -6,6 +8,6 @@ class SuccessViewModel {
     }
 
     func returnToEncodeView() {
-        router.showEncode()
+        router.showEncode(view: EmptyView())
     }
 }
